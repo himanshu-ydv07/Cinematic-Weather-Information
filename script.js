@@ -87,8 +87,8 @@ async function searchWeather() {
   try {
     // 🔹 Fetch weather from YOUR backend
     const res = await fetch(
-      `http://localhost:5000/api/weather?city=${encodeURIComponent(city)}`
-    );
+  `https://cinematic-weather-information.onrender.com/api/weather?city=${encodeURIComponent(city)}`
+);
 
     const d = await res.json();
 
@@ -127,9 +127,8 @@ async function searchWeather() {
 
     // 🔹 Fetch background from backend
     const bgRes = await fetch(
-      `http://localhost:5000/api/background?city=${encodeURIComponent(d.name)}`
-    );
-
+  `https://cinematic-weather-information.onrender.com/api/background?city=${encodeURIComponent(d.name)}`
+);
     const bgData = await bgRes.json();
 
     if (bgData.results && bgData.results.length) {
@@ -147,4 +146,5 @@ async function searchWeather() {
     searchBtn.innerHTML = "🔍";
     searchBtn.disabled = false;
   }
+
 }
