@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinematics Weather</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="weather-app" id="app">
+    <!-- Dynamic Background -->
+    <div class="bg-image" id="bgImage">
+      <img id="bgImg" src="" alt="City background" />
+      <div class="bg-overlay"></div>
+    </div>
+    <!-- Floating Elements -->
+    <div class="floating-layer">
+      <div class="sun"></div>
+      <div class="moon"></div>
+      <div class="cloud cloud-1">
+        <div class="cloud-part" style="width:48px;height:32px"></div>
+        <div class="cloud-part" style="width:64px;height:48px;margin-left:-19px"></div>
+        <div class="cloud-part" style="width:80px;height:38px;margin-left:-24px"></div>
+        <div class="cloud-part" style="width:40px;height:28px;margin-left:-12px"></div>
+      </div>
+      <div class="cloud cloud-2">
+        <div class="cloud-part" style="width:36px;height:24px"></div>
+        <div class="cloud-part" style="width:50px;height:36px;margin-left:-15px"></div>
+        <div class="cloud-part" style="width:60px;height:30px;margin-left:-18px"></div>
+      </div>
+      <div class="cloud cloud-3">
+        <div class="cloud-part" style="width:30px;height:20px"></div>
+        <div class="cloud-part" style="width:42px;height:32px;margin-left:-13px"></div>
+        <div class="cloud-part" style="width:52px;height:26px;margin-left:-16px"></div>
+      </div>
+      <div id="starsContainer"></div>
+    </div>
+    <!-- Weather Effects -->
+    <div class="effects-layer" id="effectsLayer"></div>
+    <!-- Corner Quotes -->
+    <div class="corner-quote tl">"Sunshine is the best medicine ☀️"</div>
+    <div class="corner-quote tr">"After every storm comes a rainbow 🌈"</div>
+    <div class="corner-quote bl">"Let the rain wash away the pain 🌧️"</div>
+    <div class="corner-quote br">"Stars can't shine without darkness ✨"</div>
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="hero">
+        <h1>Cinematics Weather</h1>
+        <p>Experience weather like never before — cinematic visuals, live data, and immersive atmosphere for every city on Earth.</p>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Search any city..." />
+        <button class="search-btn" id="searchBtn" onclick="searchWeather()">🔍</button>
+      </div>
+      <p class="error-msg" id="errorMsg" style="display:none"></p>
+      <div class="weather-card" id="weatherCard" style="display:none">
+        <div class="city-name" id="cityName"></div>
+        <div class="description" id="weatherDesc"></div>
+        <div class="temp-row">
+          <img id="weatherIcon" src="" alt="Weather icon" />
+          <span class="temp" id="tempValue"></span>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-icon">🌡️</span>
+            <span class="stat-label">Feels Like</span>
+            <span class="stat-value" id="feelsLike"></span>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">💧</span>
+            <span class="stat-label">Humidity</span>
+            <span class="stat-value" id="humidity"></span>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">💨</span>
+            <span class="stat-label">Wind</span>
+            <span class="stat-value" id="windSpeed"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="app-footer">
+      Made with ❤️ by <span>Himanshu Yadav</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
